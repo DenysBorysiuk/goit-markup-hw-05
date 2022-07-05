@@ -525,8 +525,6 @@ img {
 /* projects */
 
 .projects-list {
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
