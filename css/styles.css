@@ -69,7 +69,7 @@ ul {
 
 .link {
   text-decoration: none;
-  color: inherit;
+  color: currentColor;
 }
 
 /* Base Styles */
