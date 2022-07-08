@@ -203,7 +203,7 @@ img {
   align-items: center;
 }
 
-.header-contacts-desc {
+.header-contacts-icon {
   margin-right: 10px;
 }
 
@@ -218,7 +218,7 @@ img {
   padding-bottom: 200px;
 
   text-align: center;
-  background: #2f303a;
+  background: var(--dark-bg-color);
 }
 
 .overlay {
@@ -248,11 +248,11 @@ img {
   padding: 10px 32px;
 
   background-color: var(--acent-color);
+  color: var(--main-light);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: var(--main-light);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
@@ -337,13 +337,13 @@ img {
 .team-item-content {
   padding-top: 30px;
   padding-bottom: 30px;
+  text-align: center;
 }
 
 .team-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.89;
-  text-align: center;
 }
 
 .team-text {
@@ -352,7 +352,6 @@ img {
   font-size: 16px;
   line-height: 1.89;
   color: var(--secondary-font-color);
-  text-align: center;
 }
 
 .team-icon-list {
@@ -448,14 +447,13 @@ img {
 }
 
 .footer-social-subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--main-light);
   margin-bottom: 20px;
   padding-top: 12px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--main-light);
 }
 
 .footer-social-list {
@@ -467,6 +465,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
   color: var(--main-light);
   width: 44px;
   height: 44px;
@@ -503,7 +502,9 @@ img {
 }
 
 .filter-btn {
-  background: #f5f4fa;
+  padding: 6px 22px;
+
+  background: var(--light-bg-color);
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
@@ -511,8 +512,6 @@ img {
   cursor: pointer;
   color: inherit;
   border: none;
-
-  padding: 6px 22px;
 }
 
 .filter-btn:hover,
