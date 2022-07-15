@@ -218,7 +218,7 @@ img {
   padding-bottom: 200px;
 
   text-align: center;
-  background: var(--dark-bg-color);
+  background-color: var(--dark-bg-color);
 }
 
 .overlay {
@@ -416,6 +416,7 @@ img {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo-text {
@@ -448,7 +449,6 @@ img {
 
 .footer-social-subtitle {
   margin-bottom: 20px;
-  padding-top: 12px;
 
   font-weight: 700;
   line-height: 1.14;
@@ -529,12 +529,14 @@ img {
 
 /* projects */
 
-.projects-item {
-  cursor: pointer;
+.projects-card-link {
+  display: block;
+  text-decoration: none;
+  color: currentColor;
 }
 
-.projects-item:hover,
-.projects-item:focus {
+.projects-card-link:hover,
+.projects-card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
