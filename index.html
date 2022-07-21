@@ -17,7 +17,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body data-page>
     <!-- header -->
     <header class="header">
       <div class="header-container container">
@@ -61,7 +61,7 @@
       <!-- hero section -->
       <section class="hero overlay">
         <h1 class="hero-title">Эффективные решения<br />для вашего бизнеса</h1>
-        <button class="hero-button" type="button">Заказать услугу</button>
+        <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
       </section>
 
       <!-- advantages section -->
@@ -422,6 +422,17 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal windows -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" type="button" data-modal-close>
+          <svg class="close-btn-icon" width="11" height="11">
+            <use href="./images/icons.svg#close-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
