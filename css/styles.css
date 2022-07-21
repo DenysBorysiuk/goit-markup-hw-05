@@ -24,6 +24,7 @@
   /* other   */
   --indent: 30px;
   --items: 3;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -190,7 +191,7 @@ img {
 .header-link.current::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -519,11 +520,14 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-
+  z-index: 1000;
   width: 100%;
   height: 100%;
 
   background-color: var(--backdrop-bg);
+
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -532,11 +536,17 @@ img {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 .modal {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 550ms var(--timing-function);
 
   width: 528px;
   height: 531px;
