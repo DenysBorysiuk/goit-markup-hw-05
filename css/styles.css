@@ -24,7 +24,7 @@
   /* other   */
   --indent: 30px;
   --items: 3;
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -126,11 +126,6 @@ img {
   color: var(--acent-color);
 }
 
-.link:hover,
-.link:focus {
-  color: var(--acent-color);
-}
-
 /* card-set */
 
 .card-set {
@@ -186,6 +181,12 @@ img {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color var(--animation);
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: var(--acent-color);
 }
 
 .header-link.current::after {
@@ -220,6 +221,12 @@ img {
 .header-contacts-link {
   display: flex;
   align-items: center;
+  transition: color var(--animation);
+}
+
+.header-contacts-link:hover,
+.header-contacts-link:focus {
+  color: var(--acent-color);
 }
 
 .header-contacts-icon {
@@ -273,6 +280,8 @@ img {
   border-radius: 4px;
   cursor: pointer;
   border: none;
+
+  transition: background-color var(--animation);
 }
 
 .hero-button:hover,
@@ -401,6 +410,7 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--icon-color);
+  transition: color var(--animation), background-color var(--animation);
 }
 
 .team-icon-link:hover {
@@ -425,6 +435,7 @@ img {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
+  transition: color var(--animation), border-color var(--animation);
 }
 
 .clients-link:hover {
@@ -459,23 +470,31 @@ img {
   margin-bottom: 20px;
 }
 
+.footer-item:nth-child(-n + 2) {
+  margin-bottom: 9px;
+}
+
 .footer-address {
   margin-right: 70px;
 }
 
-.address-item {
+.address-link {
+  font-style: normal;
   text-decoration: none;
   line-height: 1.7;
   color: var(--main-light);
 }
 
-.footer-item {
+.footer-item-link {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--animation);
 }
 
-.footer-item:nth-child(-n + 2) {
-  margin-bottom: 9px;
+.footer-item-link:hover,
+.footer-item-link:focus {
+  color: var(--acent-color);
 }
 
 .footer-social-subtitle {
@@ -502,12 +521,13 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: color var(--animation), background-color var(--animation);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--acent-color);
-  color: var(--main-light);
 }
 
 /**
@@ -527,7 +547,7 @@ img {
   background-color: var(--backdrop-bg);
 
   opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity var(--animation);
 }
 
 .backdrop.is-hidden {
@@ -544,10 +564,6 @@ img {
   position: relative;
   top: 50%;
   left: 50%;
-
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 550ms var(--timing-function);
-
   width: 528px;
   height: 531px;
   border-radius: 4px;
@@ -555,6 +571,9 @@ img {
   background-color: var(--main-light);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--animation);
 }
 
 .close-btn {
@@ -608,12 +627,14 @@ img {
   cursor: pointer;
   color: inherit;
   border: none;
+
+  transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
-  background-color: var(--acent-color);
   color: var(--main-light);
+  background-color: var(--acent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -627,8 +648,7 @@ img {
 
 .projects-card-link {
   display: block;
-  text-decoration: none;
-  color: currentColor;
+  transition: box-shadow var(--animation);
 }
 
 .projects-card-link:hover,
