@@ -414,8 +414,8 @@ img {
 }
 
 .team-icon-link:hover {
-  background-color: var(--acent-color);
   color: var(--main-light);
+  background-color: var(--acent-color);
 }
 
 /**
@@ -522,7 +522,7 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: color var(--animation), background-color var(--animation);
+  transition: background-color var(--animation);
 }
 
 .footer-social-link:hover,
